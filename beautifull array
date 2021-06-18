@@ -1,0 +1,70 @@
+// Java  program to check array is
+// beautiful or not
+ 
+
+import java.io.*;
+ 
+
+class GFG {
+
+     
+// Function to implement the given task
+
+ static boolean isBeautiful(int a[], int n) {
+ 
+
+int sum = a[0];
+
+boolean  isAscSorted = true;
+
+for (int i = 1; i < n; i++) {
+ 
+
+    // Checking for any repeated entry
+
+    if (a[i] == a[i - 1])
+
+    return false;
+ 
+
+    // Checking for ascending sorting
+
+    if (a[i] < a[i - 1])
+
+    isAscSorted = false;
+
+    sum += a[i];
+}
+ 
+// Does not satisfy second condition
+
+if (isAscSorted == true)
+
+    return false;
+ 
+// Sum of 1 to n elements is
+// (n*(n + 1)/2))
+
+return (sum == (n * (n + 1) / 2));
+}
+ 
+// Driver Code
+
+public static void main (String[] args) {
+ 
+
+int a[] = {1, 2, 4, 3};
+
+int n = a.length;
+ 
+
+if (isBeautiful(a, n))
+
+    System.out.println ( "Yes");
+else
+
+    System.out.println("No");
+
+     
+}
+}
