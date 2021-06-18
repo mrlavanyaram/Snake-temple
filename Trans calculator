@@ -1,0 +1,27 @@
+public class TransCalculator {
+	 
+	    public static void main(String[] args) {
+	        //initialize scanner that scans input entered by user in console
+	        Scanner myInput = new Scanner( System.in );
+	         
+	        //read two numbers from console
+	       System.out.print("Enter numbers : ");
+	        int num1 = myInput.nextInt();
+	        int num2 = myInput.nextInt();
+	        //Checking numbers whether they are valid
+	         if(num1<=100||num2<=100)
+	         {
+	        int sum;
+	        //add two numbers according to *Trans calculator
+	        sum = (num1 + num2)-10;
+	         
+	        //print the sum
+	        System.out.println(sum);
+	         }
+	         else {
+	        	 System.out.println("invalid numbers");
+	         }
+	        //close the scanner
+	        myInput.close();
+	    }
+	}
